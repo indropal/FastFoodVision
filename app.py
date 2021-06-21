@@ -4,9 +4,8 @@ import numpy as np
 from food101 import fastFood101Modellabels, fastFood101Model
 import base64
 import tensorflow as tf
-import os
 
-modelWeightPath ="C:/Users/palin/Desktop/[ML_DL]Projects_Study/[PROJECT] FOOD101/[GitHub Commit]fastFoodVision/food101_finetune_3.ckpt"
+modelWeightPath ="food101_finetune_3.ckpt"
 
 app = Flask(__name__)  
 
