@@ -13,7 +13,7 @@
         <div style=" text-align: center; margin-top: 2%;">
             <img id = "inference-img" src="data:;base64,{{ image_data }}" style="width: 45%; height: 45%;">
             <p style="margin-top: 3%;">
-                <a href = "http://127.0.0.1:5000/"><h2 class="btn btn-warning btn-lg">Home</h2></a>
+                <a href = "{{ url_for('upload') }}"><h2 class="btn btn-warning btn-lg">Home</h2></a>
             </p>
         </div>
     </body>
