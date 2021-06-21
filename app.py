@@ -23,7 +23,7 @@ def fastFoodInference( npImage ):
     
     return fastFood101Modellabels()[fastfoodInf]
 
-
+@app.route('/upload')
 @app.route('/')  
 def upload():  
     return render_template("index.html")  
