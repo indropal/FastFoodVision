@@ -42,20 +42,7 @@ def success():
         """
         if f.filename.split('.')[-1] not in ['jpg', 'png', 'jpeg']:
             # check if the file is in 'jpg', 'jpeg' or 'png' format if not then show error message
-             return """
-                    <html>
-                        <head>
-                            <meta charset = "utf-8">
-                            <title>Wrong File Type</title>
-                            <!--Bootstrap-->
-                            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-                        </head>
-                        <body style="text-align: center; margin-top: 10%; background-image: url( '/static/img/background.jpg' )";>
-                            <h2>Are you sure you've uploaded the right file ?<br>The file seems to be corrupt or is not of type '.jpeg', '.jpg', or '.png' <br><br> Please check & try again ! <br> 🙂 <br><br></h2>
-                            <a href = "http://127.0.0.1:5000/"><h2 class="btn btn-danger btn-lg">Home</h2></a>
-                        </body>
-                    </html>
-                    """
+             return render_template("uploadError.html")
 
         filestr = f.read()
         npimg = np.frombuffer(filestr, np.uint8) # or fromstring(filestr, np.uint8)
